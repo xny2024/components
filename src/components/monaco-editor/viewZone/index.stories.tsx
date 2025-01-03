@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import MonacoEditor from ".";
 
 const meta = {
-  title: 'MonacoEditor/basic',
+  title: 'MonacoEditor/viewZone',
   component: MonacoEditor,
   parameters: {
     layout: 'centered',
@@ -16,5 +16,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Basic: Story = {
-  args: {},
+  args: {
+  viewZoneShow: false,
+  },
 }

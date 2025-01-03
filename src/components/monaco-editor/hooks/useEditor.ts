@@ -1,5 +1,5 @@
 import { RefObject, useEffect, useRef, useState } from "react";
-import * as monaco from 'monaco-editor';
+import * as monaco from "monaco-editor/esm/vs/editor/editor.api";
 import "./userWorker";
 
 type EditorType = monaco.editor.IStandaloneCodeEditor | null;
@@ -23,7 +23,7 @@ export default function useEditor(
           monaco.editor.create(
             monacoEl.current,
             options ?? {
-              value: ["111"].join("\n"),
+              value: ["hello world"].join("\n"),
               language: "typescript",
               automaticLayout: true,
               inlineSuggest: {
